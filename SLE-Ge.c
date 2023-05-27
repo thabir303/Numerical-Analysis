@@ -8,11 +8,13 @@
 
 int main (void) {
   int i, j, k;
-  double A[MAXROW][MAXCOL] = { {1,3,2}, {1,2,3}, {2,-1,4}};
-  double b[MAXROW] = {17,16,13};
+  //double A[MAXROW][MAXCOL] = { {1,3,2}, {1,2,3}, {2,-1,4}};
+  double A[MAXROW][MAXCOL] = { {1,-1,2}, {1,2,3}, {3,-4,-5}};
+  //double b[MAXROW] = {17,16,13};
+  double b[MAXROW] = {3,5,-13};
   double Ab[MAXROW][MAXCOL+1];
   double M;
-  
+
   for (i=0; i< MAXROW; i++) {
     for (j=0; j< MAXCOL; j++) {
       Ab[i][j] = A[i][j];
@@ -38,7 +40,7 @@ int main (void) {
     }
   }
 
-  
+
   printf("[ [A'] [b'] ] :\n");
   for (i=0; i< MAXROW; i++) {
     for (j=0; j< MAXCOL+1; j++) {
